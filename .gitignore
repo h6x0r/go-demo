@@ -1,0 +1,20 @@
+# Бинарные файлы и временные директории
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+*.log
+*.env
+
+# IDE/Editor директивы (пример - IntelliJ, VSCode и т.п.)
+.idea/
+.vscode/
+*.iml
+
+# Cache (Go модули и т.д.)
+/vendor/
+*.mod
+*.sum

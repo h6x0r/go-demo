@@ -1,0 +1,109 @@
+{
+	"info": {
+		"_postman_id": "89c9a9af-5a51-442e-8cda-9c8129006f05",
+		"name": "Demo Users API",
+		"description": "Пример Postman-коллекции для тестирования Users API.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13243951",
+		"_collection_link": "https://gundabad-9185.postman.co/workspace/go~ded439b3-33aa-4129-b71c-f4b5277f437b/collection/13243951-89c9a9af-5a51-442e-8cda-9c8129006f05?action=share&source=collection_link&creator=13243951"
+	},
+	"item": [
+		{
+			"name": "Получить список пользователей",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/user/d3468dfb-dd91-47b5-9f2b-bbfccad235df",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"d3468dfb-dd91-47b5-9f2b-bbfccad235df"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Создать нового пользователя",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"firstname\": \"Carlos\",\n  \"lastname\": \"Lopez\",\n  \"email\": \"carlos@example.com\",\n  \"age\": 29\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Обновить пользователя",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"firstname\": \"CarlosUpdated\",\n  \"age\": 30\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/d3468dfb-dd91-47b5-9f2b-bbfccad235df",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"d3468dfb-dd91-47b5-9f2b-bbfccad235df"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Удалить пользователя",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/user/d3468dfb-dd91-47b5-9f2b-bbfccad235df",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"d3468dfb-dd91-47b5-9f2b-bbfccad235df"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
