@@ -11,6 +11,6 @@ type User struct {
 	Firstname string    `json:"firstname" binding:"required"`
 	Lastname  string    `json:"lastname" binding:"required"`
 	Email     string    `json:"email" binding:"required,email"`
-	Age       int       `json:"age" binding:"required,gte=0"`
+	Age       uint      `json:"age" binding:"required,gte=0"`
 	Created   time.Time `json:"created"`
 }

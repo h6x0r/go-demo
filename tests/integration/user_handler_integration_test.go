@@ -158,8 +158,9 @@ func TestUserIntegration_Update(t *testing.T) {
 	assert.NotNil(t, updated.Firstname, "Firstname не должно быть nil")
 	assert.Equal(t, "Carlos", *updated.Firstname, "Имя не обновилось")
 
+	var age uint = 29
 	assert.NotNil(t, updated.Age, "Age не должно быть nil")
-	assert.Equal(t, 29, *updated.Age, "Возраст не обновился")
+	assert.Equal(t, &age, updated.Age, "Возраст не обновился")
 }
 
 // TestUserIntegration_Delete проверяет удаление пользователя (если метод реализован)
